@@ -1,0 +1,29 @@
+<form class="formwrapper">
+
+  <!-- SECTION 1 -->
+  <div class="sections" [class.active]="step === 1">
+    <div class="inputcontainer">
+      <div class="entryarea">
+        <input type="text" required />
+        <div class="labelline">Name</div>
+      </div>
+    </div>
+
+    <button type="button" (click)="next()">Next</button>
+  </div>
+
+
+  <!-- SECTION 2 -->
+  <div class="sections" [class.active]="step === 2">
+    <div class="inputcontainer">
+      <div class="entryarea">
+        <input type="text" required />
+        <div class="labelline">Email</div>
+      </div>
+    </div>
+
+    <button type="button" (click)="prev()">Back</button>
+    <button type="submit">Submit</button>
+  </div>
+
+</form>

@@ -43,6 +43,7 @@ export class Login {
         }
         else{
           alert(res.message);
+          console.error(res.message);
         }
       },
       error:(err)=>{

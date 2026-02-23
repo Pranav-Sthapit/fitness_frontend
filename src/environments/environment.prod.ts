@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendUrl: '' // deployed Express server
+  backendUrl: 'https://fitness-backend-o5t4.onrender.com' // deployed Express server
 };

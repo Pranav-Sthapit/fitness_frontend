@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  backendUrl: 'http://localhost:8000' // your local Express server
+  backendUrl: 'https://fitness-backend-o5t4.onrender.com' // your local Express server
 };

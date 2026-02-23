@@ -1,0 +1,101 @@
+<form [formGroup]="nutritionForm" (ngSubmit)="onSubmit()">
+<div class="sections" [class.active]="step == 0">
+
+      <div class="maincontainer">
+        <h4 class="questiontext">How much fruits and vegetables do you consume per day?</h4>
+        <select required formControlName="fruitsVeggies">
+          <option value="" disabled>Select servings</option>
+          <option value="2">0 - 1 servings</option>
+          <option value="6">2 - 4 servings</option>
+          <option value="10">5 servings and more</option>
+        </select>
+
+        <h4 class="questiontext">What type of carbohydrates do you consume?</h4>
+        <select required formControlName="carbs">
+          <option value="" disabled>Select type</option>
+          <option value="2">Refined (White Bread,sweets)</option>
+          <option value="10">Whole grains</option>
+          <option value="6">Mixture of both</option>
+        </select>
+
+        <h4 class="questiontext">How many servings of proteins do you consume?</h4>
+        <select required formControlName="proteins">
+          <option value="" disabled>Select servings</option>
+          <option value="2">1 - 2 servings</option>
+          <option value="6">2 - 3 servings</option>
+          <option value="10">3 - 4+ servings and more</option>
+        </select>
+
+        <div class="buttoncontainer">
+          <button class="okbutton" type="button" (click)="next()">Next &gt;</button>
+        </div>
+      </div>
+</div>
+<div class="sections" [class.active]="step == 1">
+      <div class="maincontainer">
+        <h4 class="questiontext">How much healthy fats do you consume per day?</h4>
+        <select required formControlName="fats">
+          <option value="" disabled>Select servings in tea spoons</option>
+          <option value="2">0 - 1 servings</option>
+          <option value="6">1 - 2 servings</option>
+          <option value="10">2 - 4 servings</option>
+        </select>
+
+        <h4 class="questiontext">How often  do you consume sugary drinks?</h4>
+        <select required formControlName="sugar">
+          <option value="" disabled>Select frequency</option>
+          <option value="2">Daily</option>
+          <option value="6">Weekly</option>
+          <option value="10">Rarely</option>
+        </select>
+
+        <h4 class="questiontext">What often  do you consume salty foods?</h4>
+        <select required formControlName="salt">
+          <option value="" disabled>Select frequency</option>
+          <option value="2">Daily</option>
+          <option value="6">Sometimes</option>
+          <option value="10">Rarely</option>
+        </select>
+
+        <div class="buttoncontainer">
+          <button class="okbutton" type="button" (click)="prev()">&lt; Previous</button>
+          <button class="okbutton" type="button" (click)="next()">Next &gt;</button>
+        </div>
+      </div>
+</div>
+  <div class="sections" [class.active]="step == 2">
+      <div class="maincontainer">
+        <h4 class="questiontext">How often do you consume calcium foods?</h4>
+        <select required formControlName="calcium">
+          <option value="" disabled>Select frequency</option>
+          <option value="10">Daily</option>
+          <option value="6">Sometimes</option>
+          <option value="2">Rarely</option>
+        </select>
+
+        <h4 class="questiontext">How often do you consume junk foods?</h4>
+        <select required formControlName="junk">
+          <option value="" disabled>Select frequency</option>
+          <option value="2">Daily</option>
+          <option value="6">Weekly</option>
+          <option value="10">Rarely</option>
+        </select>
+
+        <h4 class="questiontext">How many liter water do you consume per day?</h4>
+        <select required formControlName="water">
+          <option value="" disabled>Select frequency</option>
+          <option value="2">1L and less</option>
+          <option value="6">1L - 1.75L</option>
+          <option value="10">1.75L - 2.25L</option>
+        </select>
+
+        <div class="buttoncontainer">
+          <button class="okbutton" type="button" (click)="prev()">&lt; Previous</button>
+          <button class="okbutton" type="submit">Submit</button>
+        </div>
+      </div>
+</div>
+
+</form>
+
+<!--Section three-->

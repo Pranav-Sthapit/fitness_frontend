@@ -1,0 +1,166 @@
+
+
+/* Main form container */
+.maincontainer {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  width: 350px;
+}
+.message{
+  text-align: center;
+}
+.message h3{
+  margin-bottom: 15px ;
+}
+.message ul li{
+  list-style-type:disc;
+}
+.error{
+  color:red;
+  width:100%;
+  text-align: center;
+}
+
+.sections {
+  position: absolute;
+  top:50%;
+  left:50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) translateX(100%);
+  transition: 0.5s ease-in-out;
+}
+
+.sections.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) translateX(0);
+}
+
+
+/* Input container spacing */
+.inputcontainer {
+  margin-bottom: 25px;
+}
+
+/* Entry area relative for floating labels */
+.entryarea {
+  position: relative;
+  height: 60px;
+}
+
+/* Input fields */
+ input {
+  width: 100%;
+  padding: 18px 15px 5px 15px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background: transparent;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+/* Input focus and valid effect */
+ input:focus,
+ input:valid {
+  border-color: #4caf50;
+  background: transparent;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Floating labels */
+ .labelline {
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  font-size: 1em;
+  color: #777;
+  background: #fff;
+  padding: 0 5px;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+/* Move label when input is focused or valid */
+input:focus + .labelline,
+input:valid + .labelline {
+  top: -10px;
+  font-size: 0.8em;
+  color: #4caf50;
+}
+
+/* Login button */
+.okbutton {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 10px;
+  background: #4caf50;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.okbutton:hover {
+  background: #45a049;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+
+ select {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background: transparent;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+/* Input focus and valid effect */
+ select:focus,
+ select:valid {
+  border-color: #4caf50;
+  background: transparent;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Floating labels */
+ .labelline {
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  font-size: 1em;
+  color: #777;
+  background: #fff;
+  padding: 0 5px;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+/* Move label when input is focused or valid */
+select:focus + .labelline,
+select:valid + .labelline {
+  top: -10px;
+  font-size: 0.8em;
+  color: #4caf50;
+}
+
+.buttoncontainer{
+    margin-bottom: 25px;
+    display: flex;
+    gap: 25px;
+    font-size: 0.8em;
+}
+
+.buttoncontainer button{
+    padding: 10px;
+}

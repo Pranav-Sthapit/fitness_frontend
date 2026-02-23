@@ -1,0 +1,37 @@
+ <form [formGroup]="childrenForm" (ngSubmit)="onSubmit()">
+      <div class="maincontainer">
+        <h4 class="questiontext">How many minutes a day are you physically active?</h4>
+        <select required formControlName="cardio">
+          <option value="" disabled >Select minutes per day</option>
+          <option value="0">Less than 10 minutes</option>
+          <option value="2">10 minutes and more</option>
+          <option value="4">20 minutes and more</option>
+          <option value="6">30 minutes and more</option>
+          <option value="8">45 minutes and more</option>
+          <option value="10">60 minutes and more</option>
+        </select>
+
+        <h4 class="questiontext">How many days a week do you muscle train?</h4>
+        <select required formControlName="muscle">
+          <option value="" disabled >Select days per week</option>
+          <option value="0">0 days (No training)</option>
+          <option value="3">1 day</option>
+          <option value="6">2 days</option>
+          <option value="10">3 days and more</option>
+        </select>
+
+        <h4 class="questiontext">How many days a week do you do bone strengthening exercise?</h4>
+        <select required formControlName="bone">
+          <option value="" disabled >Select days per week</option>
+          <option value="0">0 days (No training)</option>
+          <option value="3">1 day</option>
+          <option value="6">2 days</option>
+          <option value="10">3 days and more</option>
+        </select>
+
+        <div class="buttoncontainer">
+          <button class="okbutton" type="button" (click)="prev()">&lt; Previous</button>
+          <button class="okbutton" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>

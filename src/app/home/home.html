@@ -1,0 +1,83 @@
+<div class="navbar">
+  <h2>Health and Fitness Predictor</h2>
+  <div class="navitems">
+    <a class="item" routerLink="fitness_predictor">Fitness Prediction</a>
+    <a class="item" routerLink="activity_calculator">Activity Calculator</a>
+    <a class="item" routerLink="nutrition_calculator">Nutrition Calculator</a>
+  </div>
+  <button class="logout" (click)="logout()">Logout</button>
+</div>
+<div class="main">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Health & Fitness Predictor</h1>
+    <p>Analyze your health, predict fitness level, and get smart recommendations.</p>
+
+    <div class="hero-buttons">
+      <button (click)="goToFitnessPredictor()">Predict Fitness</button>
+      <button (click)="goToActivityCalculator()">Activity Calculator</button>
+      <button (click)="goToNutritionCalculator()">Nutrition Calculator</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="card">
+      <h3>🏃 Activity Tracking</h3>
+      <p>Measure daily activity and improve lifestyle.</p>
+    </div>
+
+    <div class="card">
+      <h3>🥗 Nutrition Analysis</h3>
+      <p>Check diet quality and get improvement tips.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧠 AI Fitness Prediction</h3>
+      <p>Predict overall health score using ML model.</p>
+    </div>
+  </section>
+
+
+  <section class="who-section">
+
+  <h2>WHO Daily Health Recommendations</h2>
+
+  <div class="who-cards">
+
+    <!-- Nutrition -->
+    <div class="who-card">
+      <h3>🥗 Daily Nutrition Recommendation (WHO)</h3>
+      <p>
+        The World Health Organization recommends a balanced diet that includes
+        fruits, vegetables, whole grains, lean proteins, and healthy fats.
+        Adults should limit salt, sugar, and saturated fats while drinking
+        sufficient water daily.
+      </p>
+
+      <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+         target="_blank" class="who-link">
+         Read detailed WHO nutrition guidelines →
+      </a>
+    </div>
+
+    <!-- Physical Activity -->
+    <div class="who-card">
+      <h3>🏃 Daily Physical Activity Recommendation (WHO)</h3>
+      <p>
+        WHO recommends at least 150 minutes of moderate-intensity physical
+        activity per week or 75 minutes of vigorous activity. Muscle-strengthening
+        activities should be done on 2 or more days per week.
+      </p>
+      <a href="https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+         target="_blank" class="who-link">
+         Read detailed WHO physical activity guidelines →
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+</div>

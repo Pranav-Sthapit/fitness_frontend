@@ -1,0 +1,54 @@
+<form (ngSubmit)="register()">
+    <div class="inputcontainer">
+      <div class="entryarea">
+        <input type="text" name="firstName" [(ngModel)]="firstName" required />
+        <div class="labelline">First Name</div>
+      </div>
+      @if (firstNameError) {
+      <div class="error">{{ firstNameError }}</div>
+    }
+    </div>
+    <div class="inputcontainer">
+      <div class="entryarea">
+        <input type="text" name="lastName" [(ngModel)]="lastName" required />
+        <div class="labelline">Last Name</div>
+      </div>
+      @if (lastNameError) {
+      <div class="error">{{ lastNameError }}</div>
+    }
+    </div>
+
+    <div class="inputcontainer">
+      <div class="entryarea">
+        <input type="text" name="email" [(ngModel)]="email" required />
+        <div class="labelline">Email</div>
+      </div>
+      @if (emailError) {
+      <div class="error">{{ emailError }}</div>
+    }
+    </div>
+
+    <div class="inputcontainer">
+    <div class="entryarea">
+      <input type="text" name="username" [(ngModel)]="username" required />
+      <div class="labelline">Username</div>
+    </div>
+    @if (usernameError) {
+      <div class="error">{{ usernameError }}</div>
+    }
+  </div>
+
+  <div class="inputcontainer">
+    <div class="entryarea">
+      <input type="password" name="password" [(ngModel)]="password" required />
+      <div class="labelline">Password</div>
+      @if (passwordError) {
+        <div class="error">{{ passwordError }}</div>
+      }
+    </div>
+  </div>
+
+    <div class="inputcontainer">
+      <button class="okbutton" type="submit">Register</button>
+    </div>
+</form>

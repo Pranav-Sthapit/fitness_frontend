@@ -1,0 +1,45 @@
+<form [formGroup]="seniorForm" (ngSubmit)="onSubmit()">
+      <div class="maincontainer">
+        <h4 class="questiontext">How many minutes a week are you physically active?</h4>
+        <div class="radioinput">
+          <input type="radio" value="normal" formControlName="cardioType"/>
+          <label>Normal Activity</label>
+        
+          <input type="radio" value="vigorous" formControlName="cardioType"/>
+          <label>Vigorous Activity</label>
+        </div>
+
+        <select required formControlName="cardio">
+          <option value="" disabled selected>Select minutes per week</option>
+          <option value="1">Less than 30 minutes</option>
+          <option value="2">30 minutes and more</option>
+          <option value="4">60 minutes and more</option>
+          <option value="6">90 minutes and more</option>
+          <option value="8">120 minutes and more</option>
+          <option value="10">150 minutes and more</option>
+        </select>
+
+        <h4 class="questiontext">How many days a week do you muscle train?</h4>
+        <select required formControlName="muscle">
+          <option value="" disabled selected>Select days per week</option>
+          <option value="0">0 days (No training)</option>
+          <option value="4">1 day</option>
+          <option value="8">2 days</option>
+          <option value="10">3 days and more</option>
+        </select>
+
+        <h4 class="questiontext">How many days a week do you do balancing exercise?</h4>
+        <select required formControlName="balance">
+          <option value="" disabled>Select days per week</option>
+          <option value="0">0 days (No training)</option>
+          <option value="4">1 day</option>
+          <option value="7">2 days</option>
+          <option value="10">3 days and more</option>
+        </select>
+
+        <div class="buttoncontainer">
+          <button class="okbutton" type="button" (click)="prev()">&lt; Previous</button>
+          <button class="okbutton" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>

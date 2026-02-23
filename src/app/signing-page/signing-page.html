@@ -1,0 +1,16 @@
+<div class="sections" [class.active]="current=='login'">
+<div class="maincontainer">    
+<app-login></app-login>
+<div style="display: flex;justify-content: end;">
+<a href="#" (click)="goToRegister($event)">Register Here</a>
+</div>
+</div>
+</div>
+<div class="sections" [class.active]="current=='register'">
+<div class="maincontainer">    
+<app-register></app-register>
+<div style="display: flex;justify-content: end;">
+<a href="#" (click)="goToLogin($event)">Login Here</a>
+</div>
+</div>
+</div>

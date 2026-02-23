@@ -1,0 +1,25 @@
+<!-- result-display.component.html -->
+<div class="container">
+  <div class="box">
+    <h2>Fitness Prediction</h2>
+    <p><strong>Fitness Score:</strong> {{ receivedData?.fitness *100 }} /100</p>
+
+    <h3>Recommendations</h3>
+    <ul>
+      <li *ngIf="receivedData?.recommendation?.activity">
+        <strong>Activity:</strong> {{ receivedData.recommendation.activity }}
+      </li>
+      <li *ngIf="receivedData?.recommendation?.nutrition">
+        <strong>Nutrition:</strong> {{ receivedData.recommendation.nutrition }}
+      </li>
+      <li *ngIf="receivedData?.recommendation?.sleep">
+        <strong>Sleep:</strong> {{ receivedData.recommendation.sleep }}
+      </li>
+      <li *ngIf="receivedData?.recommendation?.overall">
+        <strong>Overall:</strong> {{ receivedData.recommendation.overall }}
+      </li>
+    </ul>
+
+    <button class="btn" (click)="goBack()">OK</button>
+  </div>
+</div>

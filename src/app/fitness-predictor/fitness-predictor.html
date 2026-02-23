@@ -1,0 +1,163 @@
+<form [formGroup]="predictionForm" (ngSubmit)="onSubmit()">
+  <!--Section zero-->
+  <div class="sections" [class.active]="step == 0">
+    <div class="maincontainer">
+      <div class="inputcontainer message">
+        <h3>Data Entry Guidelines</h3>
+        <h5>To get accurate fitness predictions, please follow these guidelines:</h5>
+        <ul>
+          <li>Enter average values calculated over one week.</li>
+          <li>Do not enter values outside the allowed range.</li>
+          <li>Provide honest and realistic data.</li>
+        </ul>
+      </div>
+      <div class="buttoncontainer">
+        <button class="okbutton" type="button" (click)="next()">Next &gt;</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Section one-->
+  <div class="sections" [class.active]="step == 1">
+    <div class="maincontainer">
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <input type="text" required formControlName="age" />
+          <div class="labelline">Enter Your Age</div>
+        </div>
+        @if (predictionForm.get('age')?.touched && predictionForm.get('age')?.invalid) {
+          <div class="error">Enter age between 10 and 99</div>
+        }
+      </div>
+
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <input type="text" required formControlName="weight" />
+          <div class="labelline">Enter Your Weight in kg</div>
+        </div>
+        @if (predictionForm.get('weight')?.touched && predictionForm.get('weight')?.invalid) {
+          <div class="error">Enter weight between 10 and 300kg</div>
+        }
+      </div>
+
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <input type="text" required formControlName="height" />
+          <div class="labelline">Enter Your Height in cm</div>
+        </div>
+        @if (predictionForm.get('height')?.touched && predictionForm.get('height')?.invalid) {
+          <div class="error">Enter height between 50 and 250 cm</div>
+        }
+      </div>
+
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <select required formControlName="gender">
+            <option value="" [disabled]="true">Choose Your Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+        @if (predictionForm.get('gender')?.touched && predictionForm.get('gender')?.invalid) {
+          <div class="error">Please choose one of above</div>
+        }
+      </div>
+
+      <div class="buttoncontainer">
+        <button class="okbutton" type="button" (click)="prev()">&lt; Previous</button>
+        <button class="okbutton" type="button" (click)="next()">Next &gt;</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Section two-->
+  <div class="sections" [class.active]="step == 2">
+    <div class="maincontainer">
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <input type="text" required formControlName="heartRate" />
+          <div class="labelline">Enter Heart Rate</div>
+        </div>
+        @if (predictionForm.get('heartRate')?.touched && predictionForm.get('heartRate')?.invalid) {
+          <div class="error">Enter heartRate between 20 - 180</div>
+        }
+      </div>
+
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <input type="text" required formControlName="bloodPressure" />
+          <div class="labelline">Enter Your Blood Pressure</div>
+        </div>
+        @if (
+          predictionForm.get('bloodPressure')?.touched &&
+          predictionForm.get('bloodPressure')?.invalid
+        ) {
+          <div class="error">Enter bloodpressure between 50 - 250</div>
+        }
+      </div>
+
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <input type="text" required formControlName="sleepHours" />
+          <div class="labelline">Enter Your Sleep Hours</div>
+        </div>
+        @if (
+          predictionForm.get('sleepHours')?.touched && predictionForm.get('sleepHours')?.invalid
+        ) {
+          <div class="error">Enter correct sleep hours</div>
+        }
+      </div>
+
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <select required formControlName="smoke">
+            <option value="" [disabled]="true">Do you smoke</option>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+        @if (predictionForm.get('smoke')?.touched && predictionForm.get('smoke')?.invalid) {
+          <div class="error">Please choose one of above</div>
+        }
+      </div>
+
+      <div class="buttoncontainer">
+        <button class="okbutton" type="button" (click)="prev()">&lt; Previous</button>
+        <button class="okbutton" type="button" (click)="next()">Next &gt;</button>
+      </div>
+    </div>
+  </div>
+  <!--Section three-->
+  <div class="sections" [class.active]="step == 3">
+    <div class="maincontainer">
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <input type="range" min="0" max="10" required formControlName="nutrition" />
+          <div class="labelline">
+            Enter Your Nutrition Level (0-10) &nbsp; &nbsp; &nbsp; &nbsp;<span
+              style="font-size: 1.4em; color: red"
+              >{{ predictionForm.value.nutrition }}</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="inputcontainer">
+        <div class="entryarea">
+          <input type="range" min="0" max="5" required formControlName="activity" />
+          <div class="labelline">
+            Enter Your Activity Level (0-5) &nbsp; &nbsp; &nbsp; &nbsp;<span
+              style="font-size: 1.4em; color: red"
+              >{{ predictionForm.value.activity }}</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="buttoncontainer">
+        <button class="okbutton" type="button" (click)="prev()">&lt; Previous</button>
+        <button class="okbutton" type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>

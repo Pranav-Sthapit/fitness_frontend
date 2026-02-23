@@ -1,0 +1,84 @@
+ body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #1E3C72, #2A5298);
+  min-height: 100vh;  /* ensure full height */
+  width: 100vw;       /* ensure full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+
+    .container {
+  z-index: 1;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .circle:nth-child(1) { width: 200px; height: 200px; top: 10%; left: 5%; }
+    .circle:nth-child(2) { width: 300px; height: 300px; bottom: 15%; right: 10%; animation-delay: 2s; }
+    .circle:nth-child(3) { width: 150px; height: 150px; top: 50%; left: 70%; animation-delay: 4s; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-30px); }
+    }
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, #FF416C, #FF4B2B);
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.4s;
+      box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+    }
+
+    a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 75, 43, 0.6);
+    }
+
+    .error {
+      color: red;
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+    }

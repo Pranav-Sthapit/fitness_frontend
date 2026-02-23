@@ -9,4 +9,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgb(154, 200, 117);
+}
+
+
+.error{
+  color:red;
+  width:100%;
+  text-align: center;
 }
